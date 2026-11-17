@@ -1,0 +1,40 @@
+# Logiciels requis pour utiliser et travailler sur les documents du cours CombAlg / agreg Option C
+name: sage-teaching
+
+channels:
+- conda-forge
+- nodefaults
+
+dependencies:
+- python>=3.11
+- mamba
+- git
+
+##############################################################################
+# JupyterLab
+
+- jupyterlab
+- jupyterlab-language-pack-fr-FR
+- nbgitpuller
+
+# Interactive widgets
+- ipywidgets
+- ipylab                       # for dashboards
+
+# jupyterlab non critical extensions
+#- jupyter-offlinenotebook     # 2024/01/29: currently broken
+- jupyter-resource-usage
+- jupyterlab-git
+- jupyterlab_code_formatter
+- jupyter_console              # for image CI tests
+
+##############################################################################
+# Authoring tools
+- jupytext
+- jupyterlab-myst>=2.4.2
+- nbgrader>=0.9.3
+
+##############################################################################
+# For computations
+- sage>=10.4
+- pandas                       # for dashboards
